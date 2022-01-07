@@ -14,8 +14,10 @@ public class testAmazon extends BaseTest {
         amazonHomePage = new AmazonHomePage(driver);
         amazonHomePage.findToy();
         Assert.assertEquals(amazonHomePage.getActualToyResultText(), "1-48 of over 1,000 results for", "Test is wrong");
+        System.out.println(amazonHomePage.getActualToyResultText());
 
     }
+
 
 
 }

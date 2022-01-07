@@ -20,8 +20,9 @@ public class AmazonHomePage {
     @FindBy(id = "nav-search-submit-button")
     WebElement searchButton;
 
-    @FindBy(xpath = "//div[@class='a-section a-spacing-small a-spacing-top-small']//span[1]")
+    @FindBy(xpath = "//span[normalize-space()='1-48 of over 1,000 results for']")
     WebElement actualToyResultText;
+
 
     public void findToy() {
         searchBox.sendKeys(toyName);
