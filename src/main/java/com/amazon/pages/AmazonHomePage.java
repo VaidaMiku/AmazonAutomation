@@ -6,6 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class AmazonHomePage {
+
     WebDriver driver;
     String toyName = "fidget spinner";
 
@@ -33,6 +34,9 @@ public class AmazonHomePage {
         return actualToyResultText.getText();
 
     }
+
+
+}
 
 
 }
