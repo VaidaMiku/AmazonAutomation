@@ -24,7 +24,7 @@ public class BaseTest {
 
         String browser = "chrome";
         baseUrl = "https://www.amazon.co.uk";
-        nodeUrl = "http://192.168.1.183:4444";
+        nodeUrl = "http://192.168.32.5:4444";
         dc = new DesiredCapabilities();
         dc.setPlatform(Platform.WINDOWS);
         dc.setBrowserName(browser);
