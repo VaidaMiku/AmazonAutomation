@@ -15,7 +15,7 @@ public class testAmazon extends BaseTest {
     AmazonSearchPage amazonSearchPage;
 
 
-    @Test (priority = 1)
+   @Test (priority = 1)
     public void signingIn() throws IOException {
         signInPage = new SignInPage(driver);
         signInPage.signingIn();
@@ -41,8 +41,23 @@ public class testAmazon extends BaseTest {
         amazonSearchPage.addItemsToCart();
     }
 
-
+    @Test (priority = 4)
+    public void deleteItemFormCart () {
+        amazonSearchPage = new AmazonSearchPage(driver);
+        amazonSearchPage.navigateToShoppingCart();
+        Assert.assertEquals(amazonSearchPage.getNumberOfItems(), "Subtotal (2 items):", "Test not passed");
+        System.out.println(amazonSearchPage.getNumberOfItems());
+        amazonSearchPage.deleteSecondItem();
+        Assert.assertEquals(amazonSearchPage.getNumberOfItems(), "Subtotal (1 item):", "Test not passed");
+        System.out.println(amazonSearchPage.getNumberOfItems());
+    }
 }
+
+
+
+
+
+
 
 
 
