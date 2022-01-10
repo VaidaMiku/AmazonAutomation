@@ -5,13 +5,18 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.io.IOException;
+
+import static com.amazon.TestDataReader.getPassword;
+import static com.amazon.TestDataReader.getUsername;
+
 public class SignInPage {
 
     WebDriver driver;
-    String username = "petrasTester@gmail.com";
-    String password = "Amazoneamazone21?";
+    String username = getUsername();
+    String password = getPassword();
 
-    public SignInPage(WebDriver driver) {
+    public SignInPage(WebDriver driver) throws IOException {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }

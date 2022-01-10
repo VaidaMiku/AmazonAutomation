@@ -22,19 +22,19 @@ public class TestDataReader {
         return getTestData().getProperty("nodeUrl");
     }
 
-    public static String browser() throws IOException {
+    public static String getBrowser() throws IOException {
         return getTestData().getProperty("browser");
     }
 
-    public static String username() throws IOException {
+    public static String getUsername() throws IOException {
         return getTestData().getProperty("username");
     }
 
-    public static String password() throws IOException {
+    public static String getPassword() throws IOException {
         return getTestData().getProperty("password");
     }
 
-    public static String toyName() throws IOException {
+    public static String getToyName() throws IOException {
         return getTestData().getProperty("toyName");
     }
 

@@ -7,6 +7,7 @@ import com.amazon.pages.SignInPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.io.IOException;
 import java.time.Duration;
 
 public class testAmazon extends BaseTest {
@@ -16,7 +17,7 @@ public class testAmazon extends BaseTest {
 
 
     @Test (priority = 1)
-    public void signingIn() {
+    public void signingIn() throws IOException {
         signInPage = new SignInPage(driver);
         signInPage.signingIn();
 
