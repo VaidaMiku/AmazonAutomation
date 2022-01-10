@@ -3,14 +3,24 @@ package com.amazon.tests;
 import com.amazon.base.BaseTest;
 import com.amazon.pages.AmazonHomePage;
 import com.amazon.pages.AmazonSearchPage;
+import com.amazon.pages.SignInPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.time.Duration;
 
 public class testAmazon extends BaseTest {
+    SignInPage signInPage;
     AmazonHomePage amazonHomePage;
     AmazonSearchPage amazonSearchPage;
+
+
+    @Test
+    public void signingIn() {
+        signInPage = new SignInPage(driver);
+        signInPage.signingIn();
+
+    }
 
 
     @Test
