@@ -19,6 +19,8 @@ public class testAmazon extends BaseTest {
     public void signingIn() throws IOException {
         signInPage = new SignInPage(driver);
         signInPage.signingIn();
+        Assert.assertEquals(signInPage.successfulLogIn(), "Hello, John", "Test failed");
+        System.out.println(signInPage.successfulLogIn());
 
     }
 

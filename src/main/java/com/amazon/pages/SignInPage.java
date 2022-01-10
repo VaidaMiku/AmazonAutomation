@@ -36,6 +36,10 @@ public class SignInPage {
     @FindBy(xpath = "//*[@id='signInSubmit']")
     WebElement signIn;
 
+    @FindBy(xpath = "//*[@id='nav-link-accountList-nav-line-1']")
+    WebElement successfulLogInGreeting;
+
+
     public void signingIn() {
         signInButton.click();
         usernameBox.sendKeys(username);
@@ -43,6 +47,10 @@ public class SignInPage {
         passwordBox.sendKeys(password);
         signIn.click();
 
+    }
+
+    public String successfulLogIn() {
+        return successfulLogInGreeting.getText();
     }
 
 
