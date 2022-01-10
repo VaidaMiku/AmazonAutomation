@@ -15,7 +15,7 @@ public class testAmazon extends BaseTest {
     AmazonSearchPage amazonSearchPage;
 
 
-    @Test
+    @Test (priority = 1)
     public void signingIn() {
         signInPage = new SignInPage(driver);
         signInPage.signingIn();
@@ -23,7 +23,7 @@ public class testAmazon extends BaseTest {
     }
 
 
-    @Test
+    @Test (priority = 2)
     public void findToy() {
         amazonHomePage = new AmazonHomePage(driver);
         amazonHomePage.findToy();
@@ -33,7 +33,7 @@ public class testAmazon extends BaseTest {
 
     }
 
-    @Test
+    @Test (priority = 3)
     public void sortByReview() {
         amazonSearchPage = new AmazonSearchPage(driver);
         amazonSearchPage.sortByReview();
