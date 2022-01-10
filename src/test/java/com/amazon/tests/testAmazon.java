@@ -8,7 +8,6 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
-import java.time.Duration;
 
 public class testAmazon extends BaseTest {
     SignInPage signInPage;
