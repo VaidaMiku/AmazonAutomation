@@ -12,20 +12,21 @@ import java.io.IOException;
 import java.net.URL;
 import java.time.Duration;
 
+import static com.amazon.TestDataReader.*;
+
 public class BaseTest {
 
     public WebDriver driver;
-    String baseUrl;
-    String nodeUrl;
+
     DesiredCapabilities dc;
 
     @BeforeTest
     public void setUp() throws IOException {
 
-        String browser = "chrome";
-        baseUrl = "https://www.amazon.co.uk";
+        String browser = getBrowser();
+        String baseUrl = getUrl();
 
-        nodeUrl = "http://192.168.1.183:4444";
+        String nodeUrl = getNode();
         
 
         dc = new DesiredCapabilities();
