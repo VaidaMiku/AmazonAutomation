@@ -37,6 +37,15 @@ public class AmazonSearchPage {
     @FindBy(id = "add-to-cart-button")
     WebElement addToCartButton;
 
+    @FindBy(xpath = "//div[@id='nav-cart-count-container']")
+    WebElement shoppingCart;
+
+    @FindBy(id = "sc-subtotal-label-buybox")
+    WebElement itemsInCart;
+
+    @FindBy(xpath = "//div[@data-item-count='2']/div[4]/div/div/div/div/div/div/span[2]/span/input")
+    WebElement deleteButton;
+
 
 
     public void sortByReview() {
@@ -59,4 +68,17 @@ public class AmazonSearchPage {
         driver.navigate().back();
         driver.navigate().back();
     }
+
+    public void navigateToShoppingCart (){
+        shoppingCart.click();
+    }
+
+    public String getNumberOfItems() {
+        return itemsInCart.getText();
+    }
+
+    public void deleteSecondItem () {
+        deleteButton.click();
+    }
 }
+
