@@ -2,11 +2,15 @@ package com.amazon.tests;
 
 import com.amazon.base.BaseTest;
 import com.amazon.pages.AmazonHomePage;
+import com.amazon.pages.AmazonSearchPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.time.Duration;
+
 public class testAmazon extends BaseTest {
     AmazonHomePage amazonHomePage;
+    AmazonSearchPage amazonSearchPage;
 
 
     @Test
@@ -19,7 +23,18 @@ public class testAmazon extends BaseTest {
 
     }
 
-
+    @Test
+    public void sortByReview() {
+        amazonSearchPage = new AmazonSearchPage(driver);
+        amazonSearchPage.sortByReview();
+        Assert.assertTrue(amazonSearchPage.itemsAreSorted());
+        amazonSearchPage.addItemsToCart();
+    }
 
 
 }
+
+
+
+
+
