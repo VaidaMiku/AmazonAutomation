@@ -1,7 +1,6 @@
 package com.amazon;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 
@@ -36,6 +35,32 @@ public class TestDataReader {
 
     public static String getToyName() throws IOException {
         return getTestData().getProperty("toyName");
+    }
+    public static String getCountryRegion() throws IOException{
+        return getTestData().getProperty("countryRegion");
+    }
+    public static String getFullName() throws IOException {
+        return getTestData().getProperty("fullName");
+    }
+
+    public static String getPhoneNumber() throws IOException {
+        return getTestData().getProperty("phoneNumber");
+    }
+
+    public static String getPostcode() throws IOException {
+        return getTestData().getProperty("postcode");
+    }
+
+    public static String getAddressLineOrCompany() throws IOException {
+        return getTestData().getProperty("addressLineOrCompany");
+    }
+
+    public static String getTownOrCity() throws IOException {
+        return getTestData().getProperty("townOrCity");
+    }
+
+    public static String getCountry() throws IOException {
+        return getTestData().getProperty("country");
     }
 
 }
